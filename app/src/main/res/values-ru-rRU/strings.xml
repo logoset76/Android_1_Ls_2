@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Об о мне</string>
+    <string name="fio">ФИО \nE-mail</string>
+    <string name="skill">Навыки</string>
+    <string name="prosto_text">Bla..bla..bla...</string>
+    <string name="my_txt">Портретная ориентация</string>
+    <string name="txt_btt1">Следующий сотрудник</string>
+</resources>

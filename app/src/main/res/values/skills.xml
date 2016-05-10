@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="skills">
+        
+        <item>HTML \nCSS \nPHP \nJava \nAndroid</item>
+        <item>HTML \nCSS \nPHP</item>
+
+
+        </string-array>
+    
+    
+    
+    
+    
+</resources>
