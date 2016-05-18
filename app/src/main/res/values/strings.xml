@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">AboutMe</string>
-    <string name="fio">First Name and\nLast name \nE-mail</string>
-    <string name="skill">Skills</string>
+    <string name="h1">Name &amp; Last name</string>
+    <string name="h2">Skills</string>
+    <string name="h3">Contacts</string>
     <string name="prosto_text">Bla..bla..bla...</string>
     <string name="my_txt">Портретная ориентация</string>
-    <string name="txt_btt1">Next Employee</string>
+    <string name="txt_btt1">Name &amp; Last name</string>
+    <string name="txt_btt2">Skills</string>
+    <string name="txt_btt3">Contacts</string>
 </resources>

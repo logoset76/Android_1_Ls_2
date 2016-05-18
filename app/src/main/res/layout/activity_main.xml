@@ -1,15 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/colorBlack"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient"
     tools:context="ag.aboutme_android_lesson_2.MainActivity"
-    android:id="@+id/get_image">
+    android:padding="16dp">
+
+    <Button
+        android:background="@drawable/frame"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_btt1"
+        android:id="@+id/btt1"
+        android:layout_alignTop="@+id/my_image"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_btt2"
+        android:id="@+id/btt2"
+        android:background="@drawable/frame"
+        android:textAlignment="center"
+        android:layout_below="@+id/btt1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:background="@drawable/frame"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_btt3"
+        android:id="@+id/btt3"
+        android:layout_below="@+id/btt2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
 
     <TextView
         android:textSize="@dimen/bg_text_size"
@@ -21,69 +50,149 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:textSize="@dimen/sm_text_size"
-        android:textColor="@color/colorBlue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/fio"
-        android:id="@+id/fio"
-        android:layout_alignTop="@+id/skills"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:textSize="@dimen/text_size"
-        android:textColor="@color/colorWhite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/prosto_text"
-        android:id="@+id/get_fio"
-        android:layout_below="@+id/fio"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="27dp" />
-
     <ImageView
-        android:background="@color/colorWhite"
-        android:layout_width="152dp"
-        android:layout_height="152dp"
+        android:background="@android:drawable/gallery_thumb"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:id="@+id/my_image"
+        android:foregroundGravity="center"
         android:layout_below="@+id/my_txt"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="37dp" />
-    <TextView
-        android:textSize="@dimen/sm_text_size"
-        android:textColor="@color/colorBlue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/skill"
-        android:id="@+id/skills"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/my_skills"
-        android:layout_alignStart="@+id/my_skills" />
-    <TextView
-        android:textSize="@dimen/text_size"
-        android:textColor="@color/colorWhite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/prosto_text"
-        android:id="@+id/my_skills"
-        android:layout_alignTop="@+id/get_fio"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignRight="@+id/linearLayout"
+        android:layout_alignEnd="@+id/linearLayout"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="8dp" />
 
-    <Button
-        android:onClick="onButtonClick"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_btt1"
-        android:id="@+id/btt1"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/frame"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="false"
+        android:layout_marginTop="268dp"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentLeft="false">
 
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/my_image"
+            android:layout_marginTop="8dp"
+            android:gravity="top|left|center"
+            android:id="@+id/linearLayout1"
+            android:longClickable="false"
+            android:visibility="visible">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/h1"
+                android:id="@+id/h1"
+                android:textColor="@color/colorBlack"
+                android:padding="2dp"
+                android:textSize="@dimen/text_size"
+                android:layout_margin="8dp" />
+
+            <ListView
+                android:inputType="textMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/prosto_text"
+                android:id="@+id/get_fio"
+                android:textColor="@color/colorBlack"
+                android:padding="2dp"
+                android:textSize="@dimen/sm_text_size"
+                android:layout_margin="8dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout2"
+            android:layout_toEndOf="@+id/linearLayout1"
+            android:layout_alignTop="@+id/linearLayout1"
+            android:layout_toRightOf="@+id/linearLayout1"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/h2"
+                android:id="@+id/h2"
+                android:textColor="@color/colorBlack"
+                android:padding="2dp"
+                android:textSize="@dimen/text_size"
+                android:layout_below="@+id/btt1"
+                android:layout_alignRight="@+id/btt1"
+                android:layout_alignEnd="@+id/btt1"
+                android:layout_margin="8dp" />
+
+            <ListView
+                android:inputType="textMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/prosto_text"
+                android:id="@+id/my_skills"
+                android:textColor="@color/colorBlack"
+                android:padding="2dp"
+                android:textSize="@dimen/sm_text_size"
+                android:layout_alignBottom="@+id/my_image"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_margin="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout3"
+            android:layout_toEndOf="@+id/linearLayout1"
+            android:layout_alignTop="@+id/linearLayout1"
+            android:layout_toRightOf="@+id/linearLayout1"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/h3"
+                android:id="@+id/h3"
+                android:textColor="@color/colorBlack"
+                android:padding="2dp"
+                android:textSize="@dimen/text_size"
+                android:layout_below="@+id/btt1"
+                android:layout_alignRight="@+id/btt1"
+                android:layout_alignEnd="@+id/btt1"
+                android:layout_margin="8dp" />
+
+            <ListView
+                android:inputType="textMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/prosto_text"
+                android:id="@+id/my_contacts"
+                android:textColor="@color/colorBlack"
+                android:padding="2dp"
+                android:textSize="@dimen/sm_text_size"
+                android:layout_alignBottom="@+id/my_image"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_margin="8dp" />
+        </LinearLayout>
+    </LinearLayout>
 
 
 </RelativeLayout>

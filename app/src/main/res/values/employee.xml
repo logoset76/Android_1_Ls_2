@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="firstandlast">
-        <item>Brunghilda \nShlyapnikova \nEgorovna \nbru@aaa.ru</item>
-        <item>Izolda \nHrapova \nMakarovna \nizo@aaa.ru</item>
+    <string-array name="fio">
+        <item>Brunghilda</item>
+        <item>Shlyapnikova</item>
+        <item>Egorovna</item>
     </string-array>
-
-    <integer-array name="my_foto">
-        <item>@drawable/brunya1</item>
-        <item>@drawable/brunya3</item>
-    </integer-array>
 
 
 </resources>

@@ -2,8 +2,11 @@
 <resources>
     <string-array name="skills">
         
-        <item>HTML \nCSS \nPHP \nJava \nAndroid</item>
-        <item>HTML \nCSS \nPHP</item>
+        <item>Просто</item>
+        <item>Вредная</item>
+        <item>Бабуля</item>
+        <item>Люблю</item>
+        <item>Похулиганить</item>
 
 
         </string-array>
