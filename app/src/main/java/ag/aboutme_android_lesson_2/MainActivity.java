@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.view.animation.Interpolator;
 import android.view.animation.OvershootInterpolator;
 import android.widget.ArrayAdapter;
@@ -89,6 +90,8 @@ public class MainActivity extends AppCompatActivity {
                             linearLayout1.setVisibility(View.VISIBLE);
                             linearLayout2.setVisibility(View.GONE);
                             linearLayout3.setVisibility(View.GONE);
+                            linearLayout1.setAnimation(AnimationUtils.loadAnimation(getApplicationContext(), android.R.anim.slide_in_left));
+
                             break;
                         case 1:
                             Log.d("Сработал ФИО", "UP");
@@ -113,6 +116,8 @@ public class MainActivity extends AppCompatActivity {
                             linearLayout1.setVisibility(View.GONE);
                             linearLayout2.setVisibility(View.VISIBLE);
                             linearLayout3.setVisibility(View.GONE);
+                            linearLayout2.setAnimation(AnimationUtils.loadAnimation(getApplicationContext(), android.R.anim.slide_in_left));
+
                             break;
                         case 1:
                             Log.d("Сработал НАВЫКИ", "UP");
@@ -136,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
                             linearLayout1.setVisibility(View.GONE);
                             linearLayout2.setVisibility(View.GONE);
                             linearLayout3.setVisibility(View.VISIBLE);
+                            linearLayout3.setAnimation(AnimationUtils.loadAnimation(getApplicationContext(), android.R.anim.slide_in_left));
                             break;
                         case 1:
                             Log.d("Сработал КОНТАКТЫ", "UP");
