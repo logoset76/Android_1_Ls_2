@@ -1,9 +1,15 @@
 package ag.aboutme_android_lesson_2;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AnimationUtils;
@@ -14,8 +20,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity {
+
+    Toast mCurrentToast;
 
     ListView get_fio;
     ListView my_skills;
@@ -33,8 +43,65 @@ public class MainActivity extends AppCompatActivity {
 
     String[] fio;
     String[] skills;
-    String [] contacts;
+    String[] contacts;
 
+// Dobavlyaem MENU *********
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.my_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.CopyAll:
+                copyAll();
+                showToast("CopyAll successfully copied");
+                return true;
+            case R.id.CopyName:
+                copyName();
+                showToast("CopyName successfully copied");
+                return true;
+            case R.id.CopyContacts:
+                copyContacts();
+                showToast("Contacts successfully copied");
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void copyContacts(CharSequence ch) {
+        ClipboardManager clipboard = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
+
+        CharSequence clipText = get_fio.toString()+ my_skills.toString() + my_contacts.toString();
+        ClipData clip = ClipData.newPlainText(ch, clipText);
+        clipboard.setPrimaryClip(clip);
+    }
+
+    private void copyName(CharSequence ch) {
+        ClipboardManager clipboard = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
+        ClipData clip = ClipData.newPlainText(ch, get_fio.toString());
+        clipboard.setPrimaryClip(clip);
+
+    }
+
+    private void copyAll()(CharSequence ch) {
+        ClipboardManager clipboard = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
+        ClipData clip = ClipData.newPlainText(ch, my_contacts.toString());
+        clipboard.setPrimaryClip(clip);
+    }
+
+    private void showToast(String s) {
+
+        if (mCurrentToast != null) {mCurrentToast.cancel();}
+        mCurrentToast = Toast.makeText(this, s, Toast.LENGTH_SHORT);
+        mCurrentToast.show();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string-array name="skills">
-        
+
         <item>Просто</item>
         <item>Вредная</item>
         <item>Бабуля</item>
@@ -10,9 +11,8 @@
 
 
         </string-array>
-    
-    
-    
-    
-    
+
+
+    <!--   <string name="skills">Я, просто вредная бабуля, люблю похулиганить.</string>       -->
+
 </resources>

@@ -10,70 +10,24 @@
     android:background="@drawable/gradient"
     tools:context="ag.aboutme_android_lesson_2.MainActivity">
 
-    <TextView
-        android:textSize="@dimen/bg_text_size"
-        android:textColor="@color/txt_color"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/my_txt"
-        android:id="@+id/my_txt"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+    <ImageView
+        android:background="@android:drawable/gallery_thumb"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:id="@+id/my_image"
+        android:layout_below="@+id/my_txt"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
-    <ImageView
-                android:background="@android:drawable/gallery_thumb"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:id="@+id/my_image"
-        android:layout_below="@+id/btt1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp" />
-
-    <Button
-        android:background="@drawable/frame"
-        android:layout_width="88dp"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_btt1"
-        android:id="@+id/btt1"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/btt2"
-        android:layout_toStartOf="@+id/btt2" />
-
-    <Button
-        android:background="@drawable/frame"
-        android:layout_width="88dp"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_btt2"
-        android:id="@+id/btt2"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/btt3"
-        android:layout_toStartOf="@+id/btt3" />
-
-    <Button
-        android:background="@drawable/frame"
-        android:layout_width="88dp"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_btt3"
-        android:id="@+id/btt3"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/frame"
         android:layout_below="@+id/btt1"
-        android:layout_alignBottom="@+id/my_image"
         android:id="@+id/linearLayout"
         android:layout_toRightOf="@+id/my_image"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="16dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="16dp">
@@ -101,7 +55,6 @@
 
             <ListView
                 android:inputType="textMultiLine"
-                android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
@@ -109,8 +62,7 @@
                 android:id="@+id/get_fio"
                 android:textColor="@color/colorBlack"
                 android:padding="2dp"
-                android:textSize="12sp"
-                android:layout_margin="8dp" />
+                android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -193,5 +145,51 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <TextView
+        android:textSize="@dimen/bg_text_size"
+        android:textColor="@color/txt_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_txt"
+        android:id="@+id/my_txt"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone"/>
+
+    <Button
+        android:background="@drawable/frame"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_btt1"
+        android:id="@+id/btt1"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/linearLayout"
+        android:layout_alignStart="@+id/linearLayout" />
+
+    <Button
+        android:background="@drawable/frame"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_btt2"
+        android:id="@+id/btt2"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/btt1"
+        android:layout_toEndOf="@+id/btt1"
+        android:layout_marginLeft="32dp" />
+
+    <Button
+        android:background="@drawable/frame"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_btt3"
+        android:id="@+id/btt3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

@@ -8,4 +8,8 @@
     <string name="txt_btt1">Name &amp; Last name</string>
     <string name="txt_btt2">Skills</string>
     <string name="txt_btt3">Contacts</string>
+    <string name="menuCopyAll">Copy All</string>
+    <string name="menuCopyName">Copy Name</string>
+    <string name="menuCopyContacts">Copy Contacts</string>
+
 </resources>
